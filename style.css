@@ -5,22 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
-    background: linear-gradient( #bea2e7 0%, #86b7e7 100%);
 }
 body{
-    background: linear-gradient(to bottom,#bea2e7 50%, #86b7e7 100%);
     position: fixed; /* mantiene su posición */
-    align-items: center;
-    justify-content: center;
-    
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-rows:1fr 3fr;
 }
 
 .main{
-    background: linear-gradient(#bea2e7 0%, #bea2e7 100%);
+    background: linear-gradient(to bottom,#bea2e7 30%, #67caf8 100%);
+    display: grid;
+    grid-template-rows:1fr 4fr;
 }
 .main-title{
     background: linear-gradient(#bea2e7 0%, #bea2e7 100%);    
@@ -69,16 +64,28 @@ body{
 
 .metodos{
     margin: 10px;     
-    height: 100%;
+    height: 100vh;
 }
 
-.main .metodos{
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.wrapper .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.wrapper .metodos{
     display: flex;
     align-items:center;
     justify-content: center;  
 }
 
-.main .content{
+.wrapper .content{
     background: #fff;
     width: 500px;
     max-width: 95%;
@@ -96,11 +103,11 @@ body{
     animation-delay: calc(3s * var(--delay));
 }
 
-.metodos:hover .content{
+.wrapper:hover .content{
     animation-play-state: paused;
 }
 
-.main .conten:last-child{
+.metodos .conten:last-child{
     animation-delay: calc(-3s*var(--delay));
 }
 
@@ -159,7 +166,7 @@ p{
     justify-content: center;  
     color: rebeccapurple;  
 }
-.main .content .img{
+.wrapper .content .img{
     height: 120px;
     width: 140px;
     position: absolute;
