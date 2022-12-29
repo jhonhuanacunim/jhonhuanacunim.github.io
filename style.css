@@ -17,6 +17,16 @@ body{
     display: grid;
     grid-template-rows:1fr 4fr;
 }
+
+.main .metodos{
+    height: 75vh;
+    width: 100vw;
+} 
+
+body .main{
+    width: 100vw;
+    height: 100vh;
+}
 .main-title{
     background: linear-gradient(#bea2e7 0%, #bea2e7 100%);    
 }
@@ -26,7 +36,7 @@ body{
 .main .main-title{
     display: flex;
     justify-content: center;
-    margin: 50px;
+    padding: 50px;
     
     
 }
@@ -62,12 +72,16 @@ body{
     right: -130px;
 }
 
-.metodos{
-    margin: 10px;     
-    height: 100vh;
+.metodos{  
+    display: grid;
+    grid-template-columns:5fr 1fr;
+    align-items: center;
+    /* justify-items: center; */
 }
 
-.wrapper{
+
+
+.metodos .wrapper{
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -118,31 +132,66 @@ body{
     }
     18%, 28%{
         opacity: 0;
-        transform: translateY(250%) scale(0.5);
+        transform: translateY(100%) scale(0.5);
     }
     32%, 42%{
         opacity: 0.6;
-        transform: translateY(250%) scale(0.7);
+        transform: translateY(100%) scale(0.7);
     }
     46%, 56%{
         opacity: 1;
-        transform: translateY(150%) scale(1);
+        transform: translateY(0%) scale(1);
     }
     60%, 70%{
         opacity: 0.6;
-        transform: translateY(50%) scale(0.7);
+        transform: translateY(-100%) scale(0.7);
     }
     74%, 84%{
         opacity: 0;
-        transform: translateY(50%) scale(0.5);
+        transform: translateY(-100%) scale(0.5);
     }
     89%, 100%{
         opacity: 0;
-        transform: translateY(50%) scale(0.3);
+        transform: translateY(-100%) scale(0.3);
     }
 
 }
 
+@media (max-width:500px){
+    @keyframes animate{
+        0%, 14%{
+            opacity: 0;
+            transform: translateY(250%) scale(0.0);
+        }
+        18%, 28%{
+            opacity: 0;
+            transform: translateY(100%) scale(0.3);
+        }
+        32%, 42%{
+            opacity: 0.6;
+            transform: translateY(100%) scale(0.5);
+        }
+        46%, 56%{
+            opacity: 1;
+            transform: translateY(0%) scale(0.8);
+        }
+        60%, 70%{
+            opacity: 0.6;
+            transform: translateY(-100%) scale(0.5);
+        }
+        74%, 84%{
+            opacity: 0;
+            transform: translateY(-100%) scale(0.3);
+        }
+        89%, 100%{
+            opacity: 0;
+            transform: translateY(-100%) scale(0.0);
+        }
+    }    
+    .metodos .opciones{
+        justify-content: center;   
+    }
+}
 
 .content .sub-content{
     display: flex;
@@ -209,7 +258,31 @@ p{
     justify-content: center;
 }
 
+/* opciones */
+
+.metodos .opciones{
+    display: flex;
+    align-items: center;   
+    /* justify-content: center; */   
+}
+
+.opciones .group-botones{
+    flex-direction: column;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.boton{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100%;
+}
 
 /* .content a:hover{
     transform: scale(0.94);
+    scroll behavior: smooth;
 } */
