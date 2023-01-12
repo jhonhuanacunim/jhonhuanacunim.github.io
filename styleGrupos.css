@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Diseño de pagina*/
+.metodo-container {
+    background: linear-gradient(45deg, #965de2 30%, #5daace 100%); 
+    background-size: 400% 400%;
+    animation: cambiar 10s ease-in-out infinite;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    padding-top: 30px;
+}
+
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+
+
+.teoria-container .name-metodo {
+    justify-self: center;
+}
+
+.teoria-container .name-metodo div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+}
+/* Caracteristicas del titulo del metodo */
+.teoria-container .name-metodo p {
+    color: black;
+    text-align: center;
+    align-self: center;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 60px;
+}
+/* Diseñando el formulario*/
+.body-metodo {
+    justify-self: center;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 100px;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container .border-card {
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+    scroll-snap-align: center;
+    background-color: #64A0E6 ;
+    min-width: 320px;
+    max-width: 500px;
+    height: 80%;
+    max-height: 500px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+}
+.card-container .border-card:first-child {
+    margin-left: 100px;
+} 
+#solucion,#siguiente {
+    margin-right: 100px;
+}
+.card-container .card {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 100%;
+}
+.card-container .title-card, .card-container form {
+    border-radius: 10px;
+}
+.card-container .title-card {
+    background-color: #3080DE;
+    margin-bottom: 5px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+/* Titulo del formulario*/
+.card-container .title-card p {
+    font-family: 'Sofia Sans', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+/* Diseño del ingreso de datos */
+#calcular form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+.card-container form label {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    width: 260px;
+}
+.card-container form input {
+    border-radius: 5px;
+    background-color: #9FC4F0;
+    font-size: 16px;
+    border: none;
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+    color: black;
+    text-align: center;
+    width: 215px;
+    height: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+#solucion form {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#solucion form label{
+    text-align: start;
+    width: 210px;
+}
+#solucion form input, #siguiente form input{
+    width: 50px;
+}
+
+#siguiente form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#siguiente form label {
+    width: 100px;
+    justify-self: end;
+    color: black;
+}
+
+.card-container .border-options{
+    display: flex;
+
+}
+
+.border-options .border-button-calcular {
+    background: #3080DE;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 100px;
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+}
+.border-options .border-button-calcular div {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-options .border-button-calcular div a {
+    color: black;
+    font-weight: bold;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 18px;
+}
+
+.border-options .border-button-atras {
+    background: #3080DE;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+}
+
+.border-options .border-button-atras div{
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.border-options .border-button-atras div a {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+/* Diseño del boton del apartado de solucion */
+.card-container .border-button-calcular-r {
+    background: #3080DE;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 100px;
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+}
+.card-container .border-button-calcular-r div {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container .border-button-calcular-r div a {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Sofia Sans', sans-serif;
+}

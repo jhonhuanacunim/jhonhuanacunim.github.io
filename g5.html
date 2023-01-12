@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuPrincipal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+    <link rel="stylesheet" href="styleGrupos.css">
+</head>
+<body>
+    <main class="teoria-container metodo-container">
+        <section class="name-metodo">
+            <div>
+                <p>Análisis económico de líneas de espera</p>
+            </div>
+        </section>
+        <section class="body-metodo">
+            <article class="card-container" id="calcular">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Ingresar Datos</p>
+                        </section>
+                        <form action="">
+                            <input type="text" id="tasa_llegada_cliente" placeholder="Tasa de llegada ">
+                            <input type="text" id="tasa_servicio" placeholder="Tasa de servicio ">
+                            <input type="text" id="numberC" placeholder="Numero de canales ">
+                            <input type="text" id="costoS" placeholder="Costo de servidor ">
+                            <input type="text" id="costoC" placeholder="Costo de espera ">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-options">
+                    <div class="border-button-calcular">
+                        <div>
+                            <a href="#solucion" onclick="SolucionG5()">Calcular</a>
+                        </div>
+                    </div>
+                    <div class="border-button-atras">
+                        <div>
+                            <a href="./index.html">Atras</a>
+                        </div>
+                    </div>                    
+                </div>
+            </article>
+            <article class="card-container" id="solucion">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Resultado</p>
+                        </section>
+                        <form action="">
+                            <label for="">Numero promedio de unidades en linea de espera</label>
+                            <input type="text" id="Lq">
+                            <label for="">Numero promedio de unidades en el sistema</label>
+                            <input type="text" id="l">
+                            <label for="">Costo total </label>
+                            <input type="text" id="ct">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-button-calcular-r">
+                    <div>
+                        <a href="#calcular">Regresar</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="resolucion.js"></script>
+</body>
+</html>

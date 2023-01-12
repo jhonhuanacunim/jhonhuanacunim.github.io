@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuPrincipal</title>
+    <link rel="stylesheet" href="styleGrupos.css">
+</head>
+<body>
+    <main class="teoria-container metodo-container">
+        <section class="nav-metodo">
+            <div>
+                <a href="./grupo7.html"><img src="./src/flecha-regreso.svg" alt="before"></a>
+                <p>Canal único con llegadas Poisso / tiempo servicio exponenciales</p>
+                <a href="./index.html"><img src="./src/flecha-ida.svg" alt="after"></a>
+            </div>
+        </section>
+        <section class="body-metodo">
+            <article class="card-container" id="calcular">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Ingresar Datos</p>
+                        </section>
+                        <form action="">
+                            <input type="text" autocomplete="on" placeholder="Tiempo de llegadas">
+                            <input type="text" autocomplete="on" placeholder="Tiempo de servicios">
+                            <input type="text" autocomplete="on" placeholder="Población">
+                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-button">
+                    <div>
+                        <a href="#resultado">Calcular</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card-container" id="resultado">
+                <div class="border-card">
+                    <div class="card">
+                        <section class="title-card">
+                            <p>Resultado</p>
+                        </section>
+                        <form action="">
+                            <label for="">Probabilidad que no hay unidades en sistema</label>
+                            <input type="text" autocomplete="on" placeholder="">
+                            <label for="">Numero de unidades en espera</label>
+                            <input type="text" autocomplete="on" placeholder="Tiempo de servicios">
+                            <label for="">Numero de unidades en el sistema</label>
+                            <input type="text" autocomplete="on" placeholder="Población">
+                            <label for="">Tiempo de una unidad en espera</label>
+                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                            <label for="">Costo total</label>
+                            <input type="text" autocomplete="on" placeholder="Numero de Servidores">
+                        </form>
+                    </div>
+                </div>
+                <div class="border-button">
+                    <div>
+                        <a href="#calcular">Regresar</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="resolucion.js"></script>
+</body>
+</html>
