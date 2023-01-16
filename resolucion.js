@@ -51,6 +51,8 @@ function SolucionG1(){
     document.getElementById("l").value= l.toFixed(3);   //numero promedio de unidades en el sistema
     document.getElementById("Wq").value= Wq.toFixed(3); //tiempo promedio que una unidad pasa en la linea de espera
     document.getElementById("ct").value= costo_total.toFixed(2);  //costo total por hora de la operacion de servicio
+
+    //ejemplo: 50 2.5 10 1 80 100
 }
 
 function solucionG2(){
@@ -288,8 +290,3 @@ function solucionG7(){
         document.getElementById(cadena).value = pn;
     }
 }
-
-function calculargrupo8(){
-    
-}
-

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>M-Carlo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="Mc.css">
+</head>
+<body>
+    <main class="main-container metodo-container">
+        <section class="numAle-container">
+            <article class="title-card">
+                <p>Numeros aleatorios</p>
+                <input class="entry-date" type="number" id="numFilas"  min="1"  placeholder="Cantidad"/>
+                <button class="designButton" id="botonGenerarTablaAle" ><span>Generar Numeros</span> </button>
+                <hr />                            
+            </article>
+
+            <section class="body-metodo">
+                <article class="card-numAle" id="calcular">
+                    <div class="border-card">
+                        <div class="card">
+                            <section class="table">
+                                <div id="contenedorTabla">
+                                </div>   
+                            </section>
+                        </div>
+                    </div>
+                    <div class="border-options">
+                        <div class="border-button-atras">
+                            <a href="#"><img id="atrasF" src="./imagenes/atras.png" alt="after"></a>
+                        </div>
+                        <div class="border-button-adelante">
+                            <a href="#solucion"><img id="adeltante" src="./imagenes/adelante.png" alt="after"></a>
+                        </div>                    
+                    </div>
+                </article>
+                <article class="card-numAle" id="solucion">
+                    <div class="border-card">
+                        <div class="card">
+                            <section class="table">
+                                <div id="contenedorTabla-Resul">
+                                </div>   
+                            </section>
+                        </div>
+                    </div>
+                    <div class="border-options">
+                        <div class="border-button-atras">
+                            <a href="#calcular"><img id="atras" src="./imagenes/atras.png" alt="after"></a>
+                        </div>
+                        <div class="border-button-adelante">
+                            <a href="#resultado"><img id="adelante" src="./imagenes/adelante.png" alt="after"></a>
+                        </div>                    
+                    </div>
+                </article>  
+                <article class="card-numAle" id="resultado">
+                    <div class="border-card">
+                        <div class="card">
+                            <section class="table">
+                                <div id="contenedorTabla-Resul-con">
+                                </div>   
+                            </section>
+                        </div>
+                    </div>
+                    <div class="border-options">
+                        <div class="border-button-atras">
+                            <a href="#solucion"><img id="atras" src="./imagenes/atras.png" alt="after"></a>
+                        </div>
+                        <div class="border-button-adelante">
+                            <a href="#"><img id="adelanteF" src="./imagenes/adelante.png" alt="after"></a>
+                        </div>                    
+                    </div>
+                </article>               
+            </section>
+
+        </section>      
+        <section class="resul-container">
+            <div class="card-table-entry">
+                <section class="date-entry">
+                    <p>Cantidad de filas</p>
+                    <input class="entry-date" type="number" id="numeroFilas"  min="1"  placeholder="Cantidad"/>
+                    <button class="designButton" id="botonGenerarTableEntry" ><span>Generar Tabla</span> </button>
+                    <button class="designButton" id="botonCalcularTableEntry" ><span>Resolver</span> </button>
+                    <hr />                            
+                </section>
+                <section class="table-entry">
+                    <section class="table-U-F">
+                        <div id="contenedorTabla-Entry">
+                        </div>                         
+                    </section>
+
+                </section>
+            </div>
+            <div class="card-table-exit">
+                <section class="date-exit">
+                    <div  id="contenedorTabla-exit">
+                    </div>                     
+                </section>
+
+
+            </div>
+        </section>
+    </main>
+
+    <script src="MC.js"></script>
+
+</body>
+</html>
+
+<!--                         <section>
+                            <a href="./grupo2.html"><img src="./src/flecha-ida.svg" alt="after"></a>
+                            <div>
+                                <a href="#resultado" onclick="calculargrupo1()">Calcular</a>
+                            </div>
+                        </section> -->

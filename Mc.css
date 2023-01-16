@@ -1,0 +1,400 @@
+body{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+}
+
+
+.main-container{
+
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    animation: cambiar 10s ease-in-out infinite;
+    
+}
+
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+
+.metodo-container{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);   
+    background-size: 400% 400%; 
+}
+
+ .numAle-container {
+    background: #f9e498;
+    margin: 10px;
+    border-radius: 15px;
+ }
+
+.numAle-container .title-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-card .entry-date{
+    margin-bottom: 10px;
+    width: 150px;
+    min-width: 120px;
+
+}
+
+.title-card p{
+    padding-top: 15px;
+}
+/* Diseño de los numeros aleatorios */
+table,td{
+    border: 1px solid black;
+}
+td{
+    padding: 4px; text-align: center;
+}
+
+.body-metodo {
+    justify-self: center;
+    display: flex;
+    overflow-x: scroll;
+    max-width: 300px;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    gap: 10px;
+}
+
+.body-metodo::-webkit-scrollbar{
+    width: 0;
+}
+
+.card-numAle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-numAle .border-card{
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.card-numAle .border-card:first-child{
+    margin-left: 100px;
+}
+
+#solucion,#calcular,#resultado {
+    margin-right: 100px;
+}
+
+.card-numAle .border-options{
+    display: flex;
+    margin-left: 90px;
+}
+
+.card-numAle .border-button-atras div {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tabla de los  resultados */
+#contenedorTabla-Resul, #contenedorTabla-Resul-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 225px;
+    max-height: 400px;    
+    padding: 10px;
+}
+
+#contenedorTabla-Resul,#contenedorTabla-Resul-con th{
+    text-align: center;
+}
+
+#contenedorTabla-Resul,#contenedorTabla-Resul-con .table{
+    min-width: 200px;
+    text-align: center;
+}
+
+#tableEnd th{
+    border: 1px solid black;
+}
+#card-table-resul th{
+    border: 1px solid black;
+}
+
+/* Tabla de los numero aleatorios */
+#contenedorTabla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 225px;
+    max-height: 400px;
+    padding: 10px;
+}
+
+#contenedorTabla th{
+    text-align: center;
+}
+
+.card{
+    border-radius: 15px;
+}
+
+ .table #contenedorTabla{
+    min-width: 200px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.table{
+    overflow-y: scroll;
+    margin: 0;
+    border-radius: 15px;
+    background:#a1fafa;
+    box-shadow: 12px 11px 21px -7px rgba(0,0,0,0.56);
+    -webkit-box-shadow: 12px 11px 21px -7px rgba(0,0,0,0.56);
+    -moz-box-shadow: 12px 11px 21px -7px rgba(0,0,0,0.56);
+
+}
+
+.table::-webkit-scrollbar{
+    width: 0;
+}
+
+#card-table th{
+    border: 1px solid black;
+}
+
+/* Diseño de las tablas de entrada y salida de datos */
+.resul-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.card-table-entry{
+    margin: 10px;  
+    border-radius: 15px;
+    background:aquamarine;
+}
+
+.resul-container .card-table-entry{
+    height: 300px;
+    max-height: 45%;
+}
+/* Diseño de la tabla de ingreso de datos */
+.card-table-entry{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+.card-table-entry .date-entry, .table-entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.table-entry #contenedorTabla-Entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.date-entry .entry-date{
+    margin-bottom: 10px;
+    width: 70%;
+    min-width: 87px;
+    margin: 5px;
+
+}
+/* Diseño de tabla de entrada de datos (unidades, frecuencia) */
+
+.date-entry{
+    background: #cdcdcd;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.date-entry p{
+    text-align: center;
+}
+
+
+#card-table-entry, th, td{
+    border: 1px solid black;
+}
+
+#card-table-entry td .card-date-entry{
+    border: none;
+}
+
+#card-table-entry thead th, #inputTextResul{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#inputTextResul p{
+    margin: 0;
+}
+
+#card-table-entry thead th .enca{
+    margin: 10px;
+}
+
+.date-entry #botonGenerarTableEntry{
+    margin: 10px;
+}
+
+#contenedorTabla-Entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 225px;
+    max-height: 250px;
+    padding: 10px;   /* sin paggin */
+
+}
+
+.table-U-F{
+    overflow-y: scroll;
+    margin: 0;
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+    border-radius: 15px;
+    background:#a1fafa;
+
+}
+
+.table-U-F::-webkit-scrollbar{
+    width: 0;
+}
+
+#card-table-entry thead {
+    width: 180px;
+}
+
+
+/* Diseño de la tabla de la parte de rangos */
+
+
+.card-table-exit{
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.resul-container .card-table-exit{
+    height: 300px;
+    max-height: 45%;
+    background: aquamarine;
+}
+
+.date-exit{
+    background-color:#a1fafa;
+    border-radius: 15px;
+    box-shadow:2px 2px 3px rgba(49, 49, 49, 0.5);
+}
+
+.date-exit::-webkit-scrollbar{
+    width: 0;
+}
+
+.card-table-exit .date-exit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+    max-width: 400px;
+    overflow-y: scroll;
+    margin: 0;
+}
+#contenedorTabla-exit{
+    
+    min-width: 250px;
+    max-height: 270px; 
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+
+#card-table-exit-resul thead th .enca{
+    margin: 10px;
+
+}
+/* imagenes */
+a img{
+    padding-top: 10px;
+    width: 40px;
+
+}
+
+.border-button-atras #atrasF,#adelanteF{
+    opacity: 0.3;
+}
+/* diseño de botones */
+
+.designButton{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 30px;
+    background: #69ff2e;
+    color: rgb(34, 34, 34);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.designButton::after{
+	content: "";
+    width: 500px;
+	height: 300px;
+	background: #ebcc43;
+	position: absolute;
+	z-index: 1;
+	top: -300px;
+	left: 0px;
+	transition: .4s ease-in-out all;
+	border-radius: 0px 0px 300px 300px;
+    opacity: 0.3;
+}
+
+.designButton:hover::after {
+	top: 0;
+}
+
+
