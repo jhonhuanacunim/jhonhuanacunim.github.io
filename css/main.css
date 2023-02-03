@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container-principal {
+    background-image: url("../src/img/fondo.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat; /* no se repita si es grande */
+    background-size: cover;
+    padding: 30px 0 0 0;
+}
+
+/* Parte del header(Cabecera) */
+
+.container-nav {
+    display: flex;
+    width: 70%;
+    min-height: 100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* Diseño del nav color y forma*/
+    background-color: aliceblue;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+@media (max-width:700px){
+    .container-nav{
+        flex-direction: column;
+    }
+}
+
+/* Logo */
+.container-nav .logo {
+    /* width: 100px; */
+    height: 100px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+
+}
+.container-nav .logo img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+.container-nav .enlaces .nav{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.container-nav .enlaces .nav:hover, .nombre-grupo:hover{
+    color: maroon;
+}
+
+/* Estilos de la zona principal (main) */
+.container-main {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.container-main div {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2px black;
+}
+.container-main button {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px black;
+    font-weight: bold;
+}
+
+.container-principal .container-main .fondo-song-queimporta{
+    background-color: #f96260;
+}
+
+.container-principal .container-main .fondo-song-mato{
+    background-color: #a9413f;
+}
